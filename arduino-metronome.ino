@@ -35,13 +35,7 @@ void updateLcdBeat(int beat) {
   lcd.setCursor(12, 1);
   for (int i=4; i >= 1; i--)
   {
-    if (beat == i)
-    {
-      lcd.print(beat);
-    }
-    else {
-      lcd.print(" ");
-    }
+    lcd.print(beat == i ? String(beat, DEC), " ");
   }
 }
 
